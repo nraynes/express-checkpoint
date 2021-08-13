@@ -1,0 +1,20 @@
+{
+  "name": "express-checkpoint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+    "start": "nodemon server.js"
+  },
+  "author": "Nicholas Raynes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "pg-promise": "^10.11.0",
+    "supertest": "^6.1.5"
+  }
+}
