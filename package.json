@@ -11,6 +11,7 @@
   "author": "Nicholas Raynes",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "jest": "^27.0.6",
     "nodemon": "^2.0.12",

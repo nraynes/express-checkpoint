@@ -1,8 +1,27 @@
 import express from 'express';
 import db from './db/db.js';
+import cookieParser from 'cookie-parser';
 
 const app = express();
 app.use(express.json());
+app.use(cookieParser());
+
+app.get('/setCookie', (req, res) => {
+    console.log('Setting Cookies...')
+    res.cookie('firstName', 'John')
+    res.cookie('lastName', 'Doe')
+    res.json('cookies set');
+})
+
+app.get('/readCookie', (req, res) => {
+    if (req.cookies) {
+        console.log('cookies: ', req.cookies)
+        res.send(`${req.cookies.firstName} ${req.cookies.lastName}`)
+    } else {
+        console.log('Error')
+        res.json('ERROR')
+    }
+})
 
 app.get('/movies', (req, res) => {
     if (req.query.title) {
